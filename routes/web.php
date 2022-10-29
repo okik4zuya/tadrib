@@ -1,6 +1,9 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\NewsController;
+=======
+>>>>>>> f08ba469957512e236e2cba608d29265f7bef5f1
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -16,6 +19,7 @@ use Inertia\Inertia;
 |
 */
 
+<<<<<<< HEAD
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [
 //         'canLogin' => Route::has('login'),
@@ -26,6 +30,16 @@ use Inertia\Inertia;
 // });
 
 Route::get('/', [NewsController::class, 'index']);
+=======
+Route::get('/', function () {
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
+>>>>>>> f08ba469957512e236e2cba608d29265f7bef5f1
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
